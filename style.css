@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background-color: #dedfe1;
+
+}
+
+div{
+    background-color: #d6d9d8;
+    padding:40px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(12, 201, 94, 0.1);
+    max-width:400px;
+    width:100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h2 span{
+    color:  #4CAF50;
+    animation: colorChange 3s infinite;
+}
+
+label{
+    font-size: 16px;
+    color: #333;
+}
+
+input{
+    width:100%;
+    padding :10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition:0.3s ;
+
+}
+
+input:focus{
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+button:hover{
+    background-color: rgb(15, 221, 94);
+    transform: scale(1.05);
+}
+
+a {
+    display: block;
+    margin: 10px 0;
+    color: #4CAF50;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+a:hover::after {
+    color: #1696c9;
+}
+
+@keyframes fadeIn {
+    10% {
+        opacity: 10;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes colorChange {
+    0%, 100% {
+        color: #2f80c7;
+    }
+    50% {
+        color: #45a049;
+    }
+}
+
+
+@media (max-width: 768px) {
+    div {
+        padding: 20px;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
